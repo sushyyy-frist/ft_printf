@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sait-ouc <sait-ouc@student.1337.fr>          +#+  +:+       +#+        */
+/*   By: sait-ouc <sait-ouc@student.1337.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 17:20:59 by sait-ouc          #+#    #+#             */
 /*   Updated: 2026/11/24 18:27:04 by sait-ouc         ###   ########.fr       */
@@ -14,30 +14,22 @@
 
 void	ft_putnbr(int n, int *len)
 {
-	int i;
-	char *str;
-	long nb;
+	int		i;
+	char	*str;
+	long	nb;
 
 	i = 0;
 	nb = n;
 	str = NULL;
-	if(*len == -1)
-		return;
+	if (*len == -1)
+		return ;
 	if (nb < 0)
 	{
 		ft_putchar('-', len);
 		nb = -nb;
 	}
-	if (nb == 0)
-		str[i++] = '0';
-	while (nb > 0)
-	{
-		str[i++] = (nb % 10) + '0';
-		nb = nb / 10;
-	}
-	while (i > 0 && *len != -1)
-	{
-		i--;
-		ft_putchar(str[i], len);
-	}
+	if (nb >= 10)
+		ft_putnbr(nb / 10, len);
+	if (*len != -1)
+		ft_putchar((nb % 10) + '0', len);
 }

@@ -16,17 +16,27 @@
 void	ft_puthexa_upper(unsigned int c, int *len)
 {
 	char	*hex;
+	char	result[20];
+	int		i;
 
-	hex = "123456789ABCDE";
-	if(*len == -1)
-		return;
-	if (c < 16)
-		ft_putchar(hex[c], len);
-	else
+	hex = "0123456789ABCDE";
+	i = 0;
+	if (*len == -1)
+		return ;
+	if (c == 0)
 	{
-		ft_puthexa_upper(hex[c / 16], len);
-		if(*len == -1)
-			return;
-		ft_putchar(hex[c % 16], len);
+		ft_putchar('0', len);
+		return ;
+	}
+	while (c > 0)
+	{
+		result[i] = hex[c % 16];
+		c = c / 16;
+		i++;
+	}
+	while (i > 0 && *len != -1)
+	{
+		i--;
+		ft_putchar(result[i], len);
 	}
 }

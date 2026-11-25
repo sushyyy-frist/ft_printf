@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sait-ouc <sait-ouc@student.1337.fr>          +#+  +:+       +#+        */
+/*   By: sait-ouc <sait-ouc@student.1337.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 18:34:19 by sait-ouc          #+#    #+#             */
 /*   Updated: 2026/11/24 18:34:27 by sait-ouc         ###   ########.fr       */

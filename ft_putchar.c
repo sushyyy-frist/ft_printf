@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sait-ouc <sait-ouc@student.1337.fr>          +#+  +:+       +#+        */
+/*   By: sait-ouc <sait-ouc@student.1337.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 17:16:25 by sait-ouc          #+#    #+#             */
 /*   Updated: 2026/11/24 18:15:59 by sait-ouc         ###   ########.fr       */
@@ -14,9 +14,9 @@
 
 void	ft_putchar(char c, int *len)
 {
-	if(*len == -1)
-		return;
-	if(write(1,&c,1) == -1)
+	if (*len == -1)
+		return ;
+	if (write(1, &c, 1) == -1)
 		*len = -1;
 	else
 		(*len)++;

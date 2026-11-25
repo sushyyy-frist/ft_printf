@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sait-ouc <sait-ouc@student.1337.fr>          +#+  +:+       +#+        */
+/*   By: sait-ouc <sait-ouc@student.1337.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 18:37:30 by sait-ouc          #+#    #+#             */
 /*   Updated: 2026/11/24 18:37:31 by sait-ouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ft_printf.h"
 
@@ -17,8 +16,8 @@ void	ft_putstr(char *str, int *len)
 {
 	int	i;
 
-	if(*len == -1)
-		return;
+	if (*len == -1)
+		return ;
 	if (!str)
 		str = "(null)";
 	i = 0;
