@@ -14,13 +14,9 @@
 
 void	ft_putnbr(int n, int *len)
 {
-	int		i;
-	char	*str;
 	long	nb;
 
-	i = 0;
 	nb = n;
-	str = NULL;
 	if (*len == -1)
 		return ;
 	if (nb < 0)

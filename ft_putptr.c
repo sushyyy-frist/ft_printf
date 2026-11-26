@@ -20,6 +20,11 @@ void	ft_putptr(unsigned long c, int *len, int in_first)
 
 	hex = "0123456789abcdef";
 	i = 0;
+	if(!c)
+	{
+		ft_putstr("(nil)",len);
+		return;
+	}
 	if (*len == -1)
 		return ;
 	if (in_first)

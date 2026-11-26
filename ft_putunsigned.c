@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_putunsigned(int n, int *len)
+void	ft_putunsigned(unsigned int n, int *len)
 {
 	char	result[20];
 	int		i;
@@ -27,7 +27,7 @@ void	ft_putunsigned(int n, int *len)
 	}
 	while (n > 0)
 	{
-		result[i] = (c % 10) + '0';
+		result[i] = (n % 10) + '0';
 		n = n / 10;
 		i++;
 	}

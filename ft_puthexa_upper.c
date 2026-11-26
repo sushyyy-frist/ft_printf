@@ -19,7 +19,7 @@ void	ft_puthexa_upper(unsigned int c, int *len)
 	char	result[20];
 	int		i;
 
-	hex = "0123456789ABCDE";
+	hex = "0123456789ABCDEF";
 	i = 0;
 	if (*len == -1)
 		return ;

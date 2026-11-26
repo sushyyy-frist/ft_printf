@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	perecentsign(va_list par, char c, int *len)
+static void	perecentsign(va_list par, char c, int *len)
 {
 	if (c && c == 'c')
 		ft_putchar(va_arg(par, int), len);
@@ -32,12 +32,25 @@ void	perecentsign(va_list par, char c, int *len)
 		ft_putchar('%', len);
 }
 
+static int ft_check_format(char c)
+{
+	 if (c == 'c' || c == 's' || c == 'p' || c == 'd'
+        || c == 'i' || c == 'u' || c == 'x' || c == 'X'
+        || c == '%')
+        return (1);
+    return (0);
+}
+
+
+
 int	ft_printf(char *str, ...)
 {
 	int		i;
 	int		len;
-	va_list	par;
 
+	if(!str) 
+		return (-1);
+	va_list	par;
 	i = 0;
 	len = 0;
 	va_start(par, str);
@@ -46,6 +59,10 @@ int	ft_printf(char *str, ...)
 		if (str[i] == '%')
 		{
 			i++;
+			if (str[i] == '\0' || !ft_check_format(str[i]))
+			{
+				return -1;
+			}
 			perecentsign(par, str[i], &len);
 		}
 		else
@@ -55,35 +72,3 @@ int	ft_printf(char *str, ...)
 	va_end(par);
 	return (len);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// ft_printf("\n");
-// ft_printf("Hello World\n");
-// ft_printf("100%%\n");
-// ft_printf("%%\n");
-// ft_printf("%%%%\n");
-// ft_printf("%%%%%%\n");
-// ft_printf("Hello %% World\n");
-// ft_printf("42%% is the answer\n");
-
-// ft_printf("%c", 'A');
-// ft_printf("%c", 'z');
-// ft_printf("%c", '0');
-// ft_printf("%c", ' ');
-// ft_printf("%c", '\n');
-// ft_printf("%c", '\t');
-// ft_printf("%c", '\0');
-// ft_printf("%c", 127);
-// ft_printf("%c", 0);
-//  int result;
-
-// result = ft_printf("Hello");
-// printf("\nReturned length: %d\n", result);
-//     // return (0);
-// int main(){
-
-//     ft_printf("hello      %        sworld","5555");
-//     printf("\nhello      %        sworld","5555");
-// }

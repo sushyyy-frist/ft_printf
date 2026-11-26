@@ -22,7 +22,7 @@ void	perecentsign(va_list par, char c, int *len);
 void	ft_putchar(char c, int *len);
 void	ft_putstr(char *str, int *len);
 void	ft_putnbr(int n, int *len);
-void	ft_putunsigned(int n, int *len);
+void	ft_putunsigned(unsigned int n, int *len);
 void	ft_putptr(unsigned long c, int *len, int in_first);
 void	ft_puthexa_lower(unsigned int c, int *len);
 void	ft_puthexa_upper(unsigned int c, int *len);
