@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sait-ouc <sait-ouc@student.1337.fr>        +#+  +:+       +#+        */
+/*   By: sait-ouc <sait-ouc@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/16 18:34:52 by sait-ouc          #+#    #+#             */
-/*   Updated: 2026/11/24 18:34:59 by sait-ouc         ###   ########.fr       */
+/*   Created: 2026/11/27 17:18:22 by sait-ouc          #+#    #+#             */
+/*   Updated: 2026/11/27 17:19:57 by sait-ouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdio.h>
 # include <unistd.h>
 
-int		ft_printf(char *str, ...);
-void	perecentsign(va_list par, char c, int *len);
+int		ft_printf(const char *str, ...);
 void	ft_putchar(char c, int *len);
 void	ft_putstr(char *str, int *len);
 void	ft_putnbr(int n, int *len);

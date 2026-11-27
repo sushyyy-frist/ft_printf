@@ -139,10 +139,10 @@ The implementation mainly relies on a few basic data types and the variadic argu
 
 | Element | Role |
 |---------|------|
-| `char *format` | Points to the format string that is parsed character by character. |
-| `va_list` | Provides access to the variable arguments passed to the function. |
-| `int` counter | Tracks the total number of characters printed. |
-| `char` | Represents the current character or format specifier being processed. |
+| `va_list` | Declares a variable used to access the additional arguments passed to the function. |
+| `va_start` | Initializes the argument list and prepares it to access the arguments following the last named parameter. |
+| `va_arg` | Retrieves the next argument from the list according to the requested type and advances the argument traversal. |
+| `va_end` | Ends the access to the variadic argument list and performs any cleanup required by the implementation. |
 
 The `va_list` structure is used to manage the variadic arguments. It allows the program to retrieve each argument in the correct order and with the appropriate type according to the format specifier.
 
@@ -226,8 +226,3 @@ Tests include:
 Comparisons with the original `printf()` function were also used to verify the output and return values for supported cases.
 
 ---
-
-## Author
-
-**sait-ouc**  
-42 Student

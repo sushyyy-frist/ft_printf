@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sait-ouc <sait-ouc@student.1337.fr>        +#+  +:+       +#+        */
+/*   By: sait-ouc <sait-ouc@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 18:37:30 by sait-ouc          #+#    #+#             */
-/*   Updated: 2026/11/24 18:37:31 by sait-ouc         ###   ########.fr       */
+/*   Updated: 2026/11/27 18:12:03 by sait-ouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,3 @@ void	ft_putstr(char *str, int *len)
 		i++;
 	}
 }
-// int main()
-// {
-//     int a = 5;
-//     ft_putstr("hello",&a);
-// }

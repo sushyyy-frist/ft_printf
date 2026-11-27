@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sait-ouc <sait-ouc@student.1337.fr>        +#+  +:+       +#+        */
+/*   By: sait-ouc <sait-ouc@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 18:37:50 by sait-ouc          #+#    #+#             */
-/*   Updated: 2026/11/24 18:37:51 by sait-ouc         ###   ########.fr       */
+/*   Updated: 2026/11/27 17:20:27 by sait-ouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ void	ft_putunsigned(unsigned int n, int *len)
 		ft_putchar(result[i], len);
 	}
 }
-
-// int main()
-// {
-//     int arr[]={1,2,3,4};
-//     ft_putUnsigned(6, arr);
-// }
